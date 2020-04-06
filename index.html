@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rhythm - Upload Page</title>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body>
+    <h1>Add Music</h1>
+    <div class="fileUploadPage">
+      <center class="uploadLayout">
+        <input type="text" placeholder="Song Name..." class="uploadSongName" />
+        <input type="text" placeholder="Artist..." class="uploadArtistName" />
+        <input
+          type="file"
+          value="upload"
+          class="uploadThumbnail"
+          data-buttonText="thumbnail"
+          accept="image/jpeg,image/gif,image/png,image/jpg"
+        />
+        <input
+          type="file"
+          value="upload"
+          class="uploadBg"
+          data-buttonText="Background"
+          accept="image/jpeg,image/gif,image/png,image/jpg"
+        />
+        <input
+          type="file"
+          value="upload"
+          class="uploadMusic"
+          data-buttonText="Music"
+          accept="audio/mp3,audio/odd,audio/wav"
+        />
+        <progress
+          value="0"
+          min="0"
+          max="100"
+          class="uploadProgress"
+          id="thumbnailUpload"
+        >
+          Thumbnail Upload Progress</progress
+        >
+        <progress
+          value="0"
+          min="0"
+          max="100"
+          class="uploadProgress"
+          id="bgUpload"
+        >
+          Background Upload Progress</progress
+        >
+        <progress
+          value="0"
+          min="0"
+          max="100"
+          class="uploadProgress"
+          id="audioUpload"
+        >
+          Audio Upload Progress</progress
+        >
+      </center>
+    </div>
+    <h2>Close tab after everything has been uploaded</h2>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDvMOXp4yT-HPr-mcvSTdcroEN5EoTcB7c",
+        authDomain: "musicapp-43362.firebaseapp.com",
+        databaseURL: "https://musicapp-43362.firebaseio.com",
+        projectId: "musicapp-43362",
+        storageBucket: "musicapp-43362.appspot.com",
+        messagingSenderId: "824354196507",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
